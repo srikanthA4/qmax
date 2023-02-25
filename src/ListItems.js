@@ -13,9 +13,9 @@ function ListItems(props){
              props.setUpdate(e.target.value,item.key)}}/>
         <span>
        
-        {/* <FontAwesomeIcon className="faicons" onClick={() => {
+        <FontAwesomeIcon className="faicons" onClick={() => {
             props.deleteItem(item.key)
-        }} icon="trash" /> */}
+        }} icon="trash" />
         </span>
      </p>
      
