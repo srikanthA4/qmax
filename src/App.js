@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import ListItems from './ListItems'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -19,7 +19,7 @@ class App extends React.Component {
     }
     this.addItem = this.addItem.bind(this);
     this.handleInput = this.handleInput.bind(this);
-    // this.deleteItem = this.deleteItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
     this.setUpdate = this.setUpdate.bind(this);
   }
   addItem(e){
@@ -44,14 +44,14 @@ class App extends React.Component {
       }
     })
   }
-  // deleteItem(key){
-  //   const filteredItems= this.state.items.filter(item =>
-  //     item.key!==key);
-  //   this.setState({
-  //     items: filteredItems
-  //   })
+  deleteItem(key){
+    const filteredItems= this.state.items.filter(item =>
+      item.key!==key);
+    this.setState({
+      items: filteredItems
+    })
 
-  // }
+  }
   setUpdate(text,key){
     console.log("items:"+this.state.items);
     const items = this.state.items;
